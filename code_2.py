@@ -1,5 +1,5 @@
 import streamlit as st
-import textract
+
 from PyPDF2 import PdfReader
 
 def extract_text_from_file(uploaded_file):
@@ -9,9 +9,6 @@ def extract_text_from_file(uploaded_file):
     if file_extension == "txt":
         # Read text file directly
         text = uploaded_file.read().decode("utf-8")
-    elif file_extension == "docx":
-        # Extract text from docx
-        text = textract.process(uploaded_file)
     elif file_extension == "pdf":
         # Extract text from pdf
         pdf_reader = PdfReader(uploaded_file)
