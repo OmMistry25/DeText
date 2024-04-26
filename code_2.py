@@ -45,7 +45,7 @@ text_input = st.text_area("Enter text here:")
 if text_input:
     text = text_input.lower()
 else:
-    st.info("Please upload a file or enter text.")
+    st.info("Please enter text.")
     text = None  # Set text to None if no input is provided
 
 if text:
