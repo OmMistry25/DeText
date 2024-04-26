@@ -42,9 +42,7 @@ st.write("Enter text to check for specific keywords.")
 # Option 2: Text Input
 text_input = st.text_area("Enter text here:")
 
-if uploaded_file is not None:
-    text = extract_text_from_file(uploaded_file)
-elif text_input:
+if text_input:
     text = text_input.lower()
 else:
     st.info("Please upload a file or enter text.")
