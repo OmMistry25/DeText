@@ -2,6 +2,11 @@ import streamlit as st
 import docx2txt
 from PyPDF2 import PdfReader
 from transformers import pipeline
+# Load model directly
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained("akshayvkt/detect-ai-text")
+model = AutoModelForSequenceClassification.from_pretrained("akshayvkt/detect-ai-text")
 
 pipe = pipeline("text-classification", model="akshayvkt/detect-ai-text")
 def check_if_ai_generated(text):
