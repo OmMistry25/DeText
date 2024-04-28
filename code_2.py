@@ -1,4 +1,6 @@
 import streamlit as st
+import docx2txt
+from PyPDF2 import PdfReader
 
 def extract_text_from_file(uploaded_file):
     # Get file extension
@@ -7,6 +9,15 @@ def extract_text_from_file(uploaded_file):
     if file_extension == "txt":
         # Read text file directly
         text = uploaded_file.read().decode("utf-8")
+    elif file_extension == "docx":
+        # Extract text from docx
+        text = docx2txt.process(uploaded_file)
+    elif file_extension == "pdf":
+        # Extract text from pdf
+        pdf_reader = PdfReader(uploaded_file)
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
     else:
         st.error("Invalid file format. Please upload a .txt, .docx, or .pdf file.")
         return None
