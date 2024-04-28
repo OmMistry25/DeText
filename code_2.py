@@ -3,11 +3,9 @@ import docx2txt
 from PyPDF2 import PdfReader
 from transformers import pipeline
 
-try:
-    detector = pipeline("text-classification", model="akshayvkt/detect-ai-text")
-except Exception as e:
-    print(f"An error occurred: {e}")
-
+# Initialize the pipeline with the AI detection model
+detector = pipeline('text-classification', model='akshayvkt/detect-ai-text')
+    
 def check_if_ai_generated(text):
     results = detector(text)
     # Extract the score and convert it to a percentage
