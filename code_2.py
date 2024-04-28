@@ -110,7 +110,7 @@ keywords = [
 keywords = [keyword.lower() for keyword in keywords]
 
 
-st.title("AI Text Detection App")
+st.title("AI Text Detection App :mag_right:")
 st.write("Upload a text file, Word document, PDF, or directly enter text to check for specific keywords.")
 
 # Option 1: File Uploader
