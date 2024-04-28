@@ -28,7 +28,9 @@ keywords = [
     "Evoke", "Pinnacle", "Evolve", "Digital Bazaar", "Tapestry", "Leverage", 
     "Centerpiece", "Subtlety", "Immanent", "Exemplify", "Blend", 
     "Comprehensive", "Archetypal", "Unity", "Harmony", "Conceptualize", 
-    "Reinforce", "Mosaic"
+    "Reinforce", "Mosaic", "Aims to bridge", "Aims to democratize", 
+    "Aims to foster innovation and collaboration", "Becomes increasingly evident", 
+    "Behind the Veil"
 ]
 
 # lower keyword list
