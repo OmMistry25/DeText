@@ -9,6 +9,6 @@ Spotting AI-generated text might involve looking for less commonly used words. F
 
 This vocabulary isn't exclusive to AI; humans also use these words, particularly in academic writing. However, AI models like ChatGPT often suggest them. In an analysis of the [arXiv database](https://www.kaggle.com/datasets/Cornell-University/arxiv), the word "delve" appeared significantly in 2023 abstracts, suggesting possible AI usage.
 
-To assist in detecting AI-written content, I've compiled [a list of 180+ words to watch for](ai_words.txt) and created a [web app](https://detext.streamlit.app/) that quickly analyzes texts to determine if they might have been AI-generated or altered.
+To assist in detecting AI-written content, I've compiled [a list of 180+ words to watch for](ai_words.txt) and created a [web app](https://detext.streamlit.app/) that quickly analyzes texts and documents to determine if they might have been AI-generated or altered.
 
 Enjoy the exploration!
