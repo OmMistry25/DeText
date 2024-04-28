@@ -2,3 +2,5 @@ streamlit
 docx2txt
 PdfReader
 PyPDF2
+transformers
+pipeline
