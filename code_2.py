@@ -107,21 +107,24 @@ keywords = [
     "With the introduction"
 ]
 
-# lower keyword list
 keywords = [keyword.lower() for keyword in keywords]
 
 
 st.title("AI Text Detection App")
-st.write("Enter text to check for specific keywords.")
+st.write("Upload a text file, Word document, PDF, or directly enter text to check for specific keywords.")
 
+# Option 1: File Uploader
+uploaded_file = st.file_uploader("Choose a file (optional)", type=["txt", "docx", "pdf"])
 
 # Option 2: Text Input
-text_input = st.text_area("Enter text here:")
+text_input = st.text_area("Or enter text here:")
 
-if text_input:
+if uploaded_file is not None:
+    text = extract_text_from_file(uploaded_file)
+elif text_input:
     text = text_input.lower()
 else:
-    st.info("Please enter text.")
+    st.info("Please upload a file or enter text.")
     text = None  # Set text to None if no input is provided
 
 if text:
