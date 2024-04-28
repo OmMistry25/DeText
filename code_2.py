@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 tokenizer = AutoTokenizer.from_pretrained("akshayvkt/detect-ai-text")
 model = AutoModelForSequenceClassification.from_pretrained("akshayvkt/detect-ai-text")
 
-pipe = pipeline("text-classification", model="akshayvkt/detect-ai-text")
+detector = pipeline("text-classification", model="akshayvkt/detect-ai-text")
 def check_if_ai_generated(text):
     results = detector(text)
     # Extract the score and convert it to a percentage
