@@ -4,5 +4,4 @@ PdfReader
 PyPDF2
 transformers
 pipeline
-pytorch
 tensorflow
