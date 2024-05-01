@@ -1,7 +1,6 @@
 import streamlit as st
 import docx2txt
 from PyPDF2 import PdfReader
-from transformers import pipeline
 
 def extract_text_from_file(uploaded_file):
    # Get file extension
